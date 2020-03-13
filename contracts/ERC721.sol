@@ -12,12 +12,17 @@ import "./ERC165.sol";
  * @title ERC721 Non-Fungible Token Standard basic implementation
  * @dev see https://eips.ethereum.org/EIPS/eip-721
  */
-contract ERC721 is Context, ERC165, IERC721 {
+contract ERC721 is Context, ERC165 /*,IERC721*/ {
     using SafeMath for uint256;
     using Address for address;
     using Counters for Counters.Counter;
     string name = "SMBT";
     uint256 count;
+
+    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
+    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
+
     // Equals to `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`
     // which can be also obtained as `IERC721Receiver(0).onERC721Received.selector`
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
