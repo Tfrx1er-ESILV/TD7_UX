@@ -16,7 +16,7 @@ contract ERC721 is Context, ERC165 /*,IERC721*/ {
     using SafeMath for uint256;
     using Address for address;
     using Counters for Counters.Counter;
-    string name = "SMBT";
+    string public name = "SMBT";
     uint256 count;
 
     event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
