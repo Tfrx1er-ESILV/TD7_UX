@@ -6,6 +6,6 @@ contract Minter is ERC721
     function createToken (uint256 tokenID) payable public
     {
         require(msg.value >= 0.1 ether);
-        _safeMint(msg.sender, tokenID)
+        _safeMint(msg.sender, tokenID);
     }
 }
