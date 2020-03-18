@@ -22,4 +22,10 @@ Question 5 :  To connect the react app to the block chain we have used web3.js. 
 
 Question 6 : We have to call the public parameter 'name' of the contract with web3js and displayed it.
 
+Question 7 : Every mint function of ERC721 are internals, because of this our Minter contract has to be an inheritance of ERC721. After these operations, we write a simple gomint function and the work is done.
+
+Question 8 : 
+
+Question 9 : We've set up docker and created an image to run our own "shell". That went by creating trow files, dockerfile and dockerignore. However, because of the react file package_lock.json we could run our own docker container.
+We didn't kept the command we used but even with package-lock.json is our .dockerignore the error still occured.
 
